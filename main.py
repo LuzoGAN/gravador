@@ -94,7 +94,7 @@ def main(page: ft.Page):
 
             # Conexão com o banco de dados
             conn = psycopg2.connect(
-                "postgres://postgres:Xoxotero1234@wtfvgmadbtpktklkiydh.db.sa-east-1.nhost.run:5432/wtfvgmadbtpktklkiydh"
+                os.getenv("DB_CONNECTION_STRING")
             )
             cursor = conn.cursor()
 
